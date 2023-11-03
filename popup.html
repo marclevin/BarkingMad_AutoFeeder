@@ -1,9 +1,81 @@
 <html>
-    <head>
-        </head>
-        <body>
-            <h1>Barking mad auto feeder</h1>
-            <p>Toggle will go here.</p>
-        </body>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            width: 25rem;
+            overflow-y: hidden !important;
+        }
+
+        .footer {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-check-label {
+        font-size: 1.2rem;
+        color: #333;
+    }
+    .form-check-input {
+        transform: scale(1.5);
+    }
+    .form-check {
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
+    .form-check-label
+    {
+        margin-right: 1rem;
+    }
+     .btn-gold {
+        background-color: #FFD700;
+        color: #333;
+     }
+    </style>
+</head>
+
+<body class="p-3 mb-2 bg-light text-dark">
+    <div class="container">
+        <div class="d-flex justify-content-center">
+        <img class="" src="images/dog32.png" alt="Dog Icon">
+    </div>
+        <h1 class="text-center">Barking Mad</h1>
+        <h2 class="text-center">Auto-Feeder</h2>
+        <div class="card mx-auto" style="width: 18rem;">
+            <div class="card-body">
+                <p class="card-text">This extension will automatically visit <a href="https://www.barkingmad.co.za/" class="card-link" target="_blank">BarkingMad</a> and click their feeding button five times per day!</p>
+            </div>
+        </div>
+        <div class="mt-1 text-center">Controls</div>
+        <div class="card mt-1">
+            <div class="card-body ml-auto">
+                <div class="form-check form-switch d-flex justify-content-between align-items-center">
+                    <label class="form-check-label" for="flexSwitchCheckChecked1">Auto-Feed Daily</label>
+                    <input class="form-check-input form-switch" type="checkbox" id="flexSwitchCheckChecked1">
+                </div>
+                <div class="form-check form-switch d-flex justify-content-between align-items-center">
+                    <label class="form-check-label" for="flexSwitchCheckChecked2">Record Feed Count</label>
+                    <input class="form-check-input form-switch" type="checkbox" id="flexSwitchCheckChecked2">
+                </div>
+            </div>
+        </div>
+        <div class="mt-1 text-center">Feed Count</div>
+        <div class="card mt-1">
+            <div class="card-body">
+                <p class="card-text" id="doggos_fed">0</p>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-around mt-2">
+        <button type="button" class="btn btn-success  ml-2" id="feed_doggos">Feed</button>
+        <a href="https://barkingmad.co.za/donate-to-dogtown/" class="btn btn-warning mr-1" target="_blank">Donate to BarkingMad</a>
+    </div>
+    <div class="footer">
+        <a href="https://www.flaticon.com/free-icons/dog" title="Dog Icons">Dog icons created by Freepik - Flaticon</a>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
 </html>
-<a href="https://www.flaticon.com/free-icons/dog" title="dog icons">Dog icons created by Freepik - Flaticon</a>

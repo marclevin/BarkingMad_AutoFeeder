@@ -10,7 +10,8 @@
       "storage",
       "tabs",
       "activeTab",
-      "scripting"
+      "scripting",
+      "alarms"
     ],
     "host_permissions": [
         "https://www.barkingmad.co.za/*",
