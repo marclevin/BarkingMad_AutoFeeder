@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "BarkingMad Autofeeder",
     "description": "Visits BarkingMad.co.za daily, and clicks the 'Click to Feed' button on your behalf. Contributing half a bowl of food per day!",
-    "version": "1.0",
+    "version": "0.0.0.1",
     "background": {
       "service_worker": "background.js"
     },
