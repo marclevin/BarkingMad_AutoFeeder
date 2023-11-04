@@ -41,35 +41,42 @@
         <img class="" src="images/dog32.png" alt="Dog Icon">
     </div>
         <h1 class="text-center">Barking Mad</h1>
-        <h2 class="text-center">Auto-Feeder</h2>
-        <div class="card mx-auto" style="width: 18rem;">
+        <h3 class="text-center">Auto-Feeder</h3>
+        <div class="card mx-auto" style="width: 19rem;">
             <div class="card-body">
-                <p class="card-text">This extension will automatically visit <a href="https://www.barkingmad.co.za/" class="card-link" target="_blank">BarkingMad</a> and click their feeding button five times per day!</p>
+                <p class="card-text">This extension will automatically visit <a href="https://www.barkingmad.co.za/" class="card-link" target="_blank">BarkingMad</a> and click their "click to feed" button for you, every day!</p>
             </div>
         </div>
+        <div class="mt-1 text-center">
+            <!-- Small text here saying Every day, your clicks contribute 1/2 a bowl of food! -->
+            <p class="text-center small text-muted">Every day, your clicks contribute 1/2 a bowl of food!</p>
+        </div>
+
         <div class="mt-1 text-center">Controls</div>
         <div class="card mt-1">
             <div class="card-body ml-auto">
                 <div class="form-check form-switch d-flex justify-content-between align-items-center">
-                    <label class="form-check-label" for="flexSwitchCheckChecked1">Auto-Feed Daily</label>
+                    <label class="form-check-label" for="flexSwitchCheckChecked1">Auto-click daily</label>
                     <input class="form-check-input form-switch" type="checkbox" id="flexSwitchCheckChecked1">
                 </div>
-                <div class="form-check form-switch d-flex justify-content-between align-items-center">
-                    <label class="form-check-label" for="flexSwitchCheckChecked2">Record Feed Count</label>
-                    <input class="form-check-input form-switch" type="checkbox" id="flexSwitchCheckChecked2">
-                </div>
+            <div class="form-check form-switch d-flex justify-content-between align-items-center">
+                <label class="form-check-label" for="flexSwitchCheckChecked2">Notify when clicked</label>
+                <input class="form-check-input form-switch" type="checkbox" id="flexSwitchCheckChecked2">
             </div>
         </div>
-        <div class="mt-1 text-center">Feed Count</div>
+        </div>
+        <div class="mt-1 text-center">Bowl Count</div>
         <div class="card mt-1">
             <div class="card-body">
                 <p class="card-text" id="doggos_fed">0</p>
             </div>
         </div>
+        <p class="card-text text-muted small text-center mt-1 mb-1" id="fed_today"></p>
     </div>
+    
     <div class="d-flex justify-content-around mt-2">
-        <button type="button" class="btn btn-success  ml-2" id="feed_doggos">Feed</button>
-        <a href="https://barkingmad.co.za/donate-to-dogtown/" class="btn btn-warning mr-1" target="_blank">Donate to BarkingMad</a>
+        <button type="button" class="btn btn-success  ml-2" id="feed_doggos">Auto-Contribute</button>
+        <a href="https://barkingmad.co.za/donate-to-dogtown/" class="btn btn-warning  mr-1" target="_blank">Donate to BarkingMad</a>
     </div>
     <div class="footer">
         <a href="https://www.flaticon.com/free-icons/dog" title="Dog Icons">Dog icons created by Freepik - Flaticon</a>
