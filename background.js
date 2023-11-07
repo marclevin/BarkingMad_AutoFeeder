@@ -69,28 +69,28 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 });
 
 function send_fed_success() {
-  if (
-    !chrome.storage.local.get(["sendNotifications"], function (result) {
-      return result.sendNotifications;
-    })
-  ) {
-    return;
-  }
-  console.log("Sending notification");
-  chrome.notifications.create(
-    "BMAutoFeeder",
+  var notifications_enabled = false;
+  chrome.storage.local.get(["sendNotifications"]).then((result) => {
+    if (result.sendNotifications)
     {
-      type: "basic",
-      message: "You contributed another half bowl!",
-      title: "BarkingMad AutoFeeder",
-      iconUrl: "./images/dog128.png",
-    },
-    function (notificationId) {
-      console.log(chrome.runtime.lastError);
+      chrome.notifications.create(
+        "BMAutoFeeder",
+        {
+          type: "basic",
+          message: "You contributed another half bowl!",
+          title: "BarkingMad AutoFeeder",
+          iconUrl: "./images/dog128.png",
+        },
+        function (notificationId) {
+          console.log(chrome.runtime.lastError);
+        }
+      );
+    } else
+    {
+      console.log("Not Enabled")
     }
-  );
+  });
 }
-
 function execute_click_script(tabId) {
   return chrome.scripting
     .executeScript({
