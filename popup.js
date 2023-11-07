@@ -28,7 +28,12 @@ function convertHalfFormatted(number) {
   chrome.storage.local.get(["FeedCount"], function (result) {
     let feedCountMessage = "You haven't contributed any bowls yet!";
     let halfBowls = convertHalfFormatted(result.FeedCount);
-  
+    if (result.FeedCount === 0)
+    {
+      feedCountMessage = "You haven't contributed any bowls yet!";
+      document.getElementById("doggos_fed").innerHTML = feedCountMessage;
+      return
+    }
     if (result.FeedCount === 1) {
       feedCountMessage = "You've contributed half a bowl of food so far!";
     } else if (result.FeedCount === 2) {
